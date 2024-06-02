@@ -1,5 +1,9 @@
 # QR Code Generator API Documentation
 
+## Live Demo
+
+You can try out the API live on [PythonAnywhere](https://nihadgurbanov.pythonanywhere.com/).
+
 ## Overview
 
 The QR Code Generator API allows users to generate QR codes dynamically by providing a URL and selecting a color for the QR code.
