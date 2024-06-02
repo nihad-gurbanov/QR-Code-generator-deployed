@@ -1,0 +1,75 @@
+body {
+  padding: 30px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 99%;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px; /* Rounded container */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  color: white;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+/* Form styling */
+.form-group {
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group-prepend,
+.input-group-append {
+  margin-right: 10px;
+}
+
+.input-group-text {
+  border-radius: 20px;
+}
+
+.form-control {
+  border-radius: 20px; /* Rounded input box */
+  box-shadow: none;
+  padding-left: 15px;
+}
+
+/* Add spacing between form elements */
+.form-group:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+/* Style placeholder text */
+.form-control::placeholder {
+  color: #ccc;
+}
+
+#url {
+  width: 70%;
+  border-radius: 10px;
+  border-width: 1.25px;
+}
