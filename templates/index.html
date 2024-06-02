@@ -1,0 +1,68 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Test QR Code Generating API</h1>
+        <p>Enter the URL or any text and select the color for your QR code:</p>
+        <form id="qrForm" action="/qr-code" method="GET">
+            <div class="form-group">
+                <label for="url">URL/Text:</label>
+                <input type="text" class="form-control" id="url" name="url" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" class="form-control" id="color" name="color" required>
+            </div>
+            <button type="button" class="btn btn-primary" id="generateButton">Generate QR Code</button>
+        </form>
+
+        <hr>
+
+        <h1>QR Code Generator API Documentation</h1>
+
+    <h2>Overview</h2>
+    <p>The QR Code Generator API allows users to generate QR codes dynamically by providing a URL and selecting a color for the QR code.</p>
+
+    <h2>Base URL</h2>
+    <p>The base URL for the API is <code>/qr-code</code>.</p>
+
+    <h2>Endpoints</h2>
+
+    <h3>Generate QR Code</h3>
+    <ul>
+        <li><strong>Endpoint:</strong> <code>/qr-code</code></li>
+        <li><strong>Method:</strong> <code>GET</code></li>
+        <li><strong>Description:</strong> Generates a QR code based on the provided URL and color.</li>
+        <li><strong>Parameters:</strong>
+            <ul>
+                <li><code>url</code> (required): The URL to be encoded in the QR code.</li>
+                <li><code>color</code> (optional): The color of the QR code. If not provided, the default color is black.</li>
+            </ul>
+        </li>
+        <li><strong>Response:</strong> If successful, returns the generated QR code image. If an error occurs, returns an error message along with the HTTP status code.</li>
+    </ul>
+
+    <h2>Usage Example</h2>
+
+    <h3>Request</h3>
+    <pre><code>GET /qr-code?url=https://example.com&color=#FF0000</code></pre>
+
+    <h3>Response</h3>
+    <p>HTTP Status Code: 200 (OK)</p>
+    <p>Content-Type: image/png</p>
+    <p>Body: (QR code image)</p>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
